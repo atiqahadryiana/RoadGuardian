@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+.vercel/
+.edge-check/
+*-check.png
+roadguardian-desktop.png
+roadguardian-mobile.png
+styles.css

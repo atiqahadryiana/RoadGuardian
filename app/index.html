@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1719">
+  <meta name="description" content="RoadGuardian AI is a simulation-only Malaysian road-safety intelligence concept. No live detection, 5G connection, or emergency dispatch.">
+  <title>RoadGuardian AI | Simulation Command Centre</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%236ed7b8' d='M16 2 28 7v8c0 7.5-5 13-12 16C9 28 4 22.5 4 15V7l12-5Z'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to dashboard</a>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="RoadGuardian navigation">
+      <a class="brand" href="#overview" aria-label="RoadGuardian AI overview">
+        <svg class="brand-mark" viewBox="0 0 44 44" aria-hidden="true"><path d="M22 3 38 9v11c0 10-6.7 17.2-16 21C12.7 37.2 6 30 6 20V9l16-6Z"/><path d="m15 23 5 5 10-12"/></svg>
+        <span><b>RoadGuardian</b><small>Connected road intelligence</small></span>
+      </a>
+      <nav class="side-nav" aria-label="Dashboard sections">
+        <a class="active" href="#overview"><span>01</span>Overview</a>
+        <a href="#scenario-lab"><span>02</span>Scenario lab</a>
+        <a href="#incident-log"><span>03</span>Incident log</a>
+        <a href="#concept"><span>04</span>Concept</a>
+      </nav>
+      <div class="sidebar-spacer"></div>
+      <section class="scope-card" aria-labelledby="scope-title">
+        <div class="status-line"><span class="status-dot" aria-hidden="true"></span><strong id="scope-title">Simulation mode</strong></div>
+        <p>No live cameras, road users, hazards, network measurements, or external dispatch.</p>
+      </section>
+      <p class="challenge-note">Cyberjaya 5G Future Talent Innovation Challenge 2026<br>Track 2 concept demonstrator</p>
+    </aside>
+
+    <main id="main-content" class="main" tabindex="-1">
+      <header class="topbar">
+        <div><span class="top-kicker">Public demo</span><strong>Road safety command centre</strong></div>
+        <div class="top-status"><span class="demo-badge">Simulated environment</span><time id="current-time" aria-label="Current Malaysia time"></time></div>
+      </header>
+
+      <div class="content">
+        <section class="intro" id="overview" aria-labelledby="page-title">
+          <div>
+            <p class="eyebrow">Malaysia-first mobility concept</p>
+            <h1 id="page-title">Earlier awareness at the edge of the road.</h1>
+            <p>Explore how privacy-conscious roadside sensing and fast event distribution <strong>could</strong> help authorised operators understand emerging risk. Every output below is synthetic.</p>
+          </div>
+          <div class="intro-actions" aria-label="Simulation controls">
+            <button class="button primary" id="guided-demo" type="button" aria-pressed="false"><span aria-hidden="true">▶</span> Watch guided demo</button>
+            <button class="button secondary" id="auto-toggle" type="button" aria-pressed="false"><span aria-hidden="true">↻</span> Auto simulate</button>
+            <button class="button secondary" id="reset" type="button">Reset demo</button>
+          </div>
+        </section>
+
+        <section class="simulation-notice" aria-label="Important simulation notice">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8v5m0 3h.01M10.3 3.8 2.4 18a2 2 0 0 0 1.8 3h15.6a2 2 0 0 0 1.8-3L13.7 3.8a2 2 0 0 0-3.4 0Z"/></svg>
+          <div><strong>Simulation only</strong><p>Fictional scenarios, risk scores, sensor states, locations, and latency. Do not use this prototype for real road-safety decisions.</p></div>
+        </section>
+
+        <section class="guided-demo" id="guided-demo-panel" aria-labelledby="guided-demo-title">
+          <div class="demo-progress" aria-hidden="true"><span id="demo-progress-bar"></span></div>
+          <header>
+            <div><p class="eyebrow">Guided live demonstration · Simulated</p><h2 id="guided-demo-title">See how a roadside signal could become operator awareness.</h2></div>
+            <span class="demo-step-count" id="demo-step-count">Ready · 4 stages</span>
+          </header>
+          <div class="demo-story" aria-live="polite" aria-atomic="true">
+            <span class="demo-story-icon" id="demo-story-icon">RG</span>
+            <div><strong id="demo-story-title">Start the guided demo</strong><p id="demo-story-copy">A 16-second walkthrough connects the synthetic junction, mock sensors, simulated delivery, and incident work queue.</p></div>
+          </div>
+          <ol class="demo-stages" id="demo-stages">
+            <li><span>01</span><div><strong>Observe</strong><small>Mock sensors</small></div></li>
+            <li><span>02</span><div><strong>Assess</strong><small>Illustrative rules</small></div></li>
+            <li><span>03</span><div><strong>Share</strong><small>Simulated 5G</small></div></li>
+            <li><span>04</span><div><strong>Review</strong><small>Human oversight</small></div></li>
+          </ol>
+        </section>
+
+        <section class="metrics" aria-label="Simulated system summary">
+          <article class="metric metric-primary"><span>Simulated risk state</span><strong id="risk-label">Low</strong><p id="risk-desc">Normal synthetic traffic</p></article>
+          <article class="metric"><span>Simulated events</span><strong id="event-total">0</strong><p>Records in this browser</p></article>
+          <article class="metric"><span>Mock sensor feeds</span><strong id="sensors-count">4 / 4</strong><p>Emulated nodes online</p></article>
+          <article class="metric"><span>Simulated latency</span><strong><span id="latency">24</span> <small>ms</small></strong><p>Illustrative, not measured</p></article>
+        </section>
+
+        <section class="workspace" aria-label="Live simulation workspace">
+          <article class="panel twin-panel">
+            <header class="panel-header">
+              <div><p class="eyebrow">Synthetic junction view</p><h2>Junction RG-01</h2><p>Fictional Cyberjaya pilot environment</p></div>
+              <div class="scene-controls"><button class="motion-toggle" id="motion-toggle" type="button" aria-pressed="true"><span aria-hidden="true">Ⅱ</span> Pause motion</button><span class="feed-badge"><span class="status-dot" aria-hidden="true"></span>Live mock feed</span></div>
+            </header>
+            <div class="scene scene-live" id="scene" role="img" aria-label="Animated schematic fictional four-way junction. Vehicles and pedestrians are synthetic shapes; motion changes with the selected simulated scenario.">
+              <div class="terrain terrain-a"><span>Green space</span></div><div class="terrain terrain-b"><span>Commercial</span></div><div class="terrain terrain-c"><span>Campus</span></div><div class="terrain terrain-d"><span>Transit</span></div>
+              <div class="road road-v"></div><div class="road road-h"></div><div class="junction"></div>
+              <div class="lane lane-v"></div><div class="lane lane-h"></div>
+              <div class="crosswalk crosswalk-n"></div><div class="crosswalk crosswalk-s"></div><div class="crosswalk crosswalk-w"></div><div class="crosswalk crosswalk-e"></div>
+              <div class="path-trace path-vehicle" aria-hidden="true"></div><div class="path-trace path-person" aria-hidden="true"></div>
+              <div class="vehicle vehicle-a" aria-hidden="true"></div><div class="vehicle vehicle-b" aria-hidden="true"></div><div class="motorcycle" aria-hidden="true"></div>
+              <div class="pedestrian pedestrian-a" aria-hidden="true"></div><div class="pedestrian pedestrian-b" aria-hidden="true"></div><div class="pedestrian pedestrian-c" aria-hidden="true"></div>
+              <div class="hazard-zone" id="hazard-zone" aria-hidden="true"><span>!</span></div>
+              <span class="sensor-tag sensor-1">S1 · Vision</span><span class="sensor-tag sensor-2">S2 · Radar</span><span class="sensor-tag sensor-3">S3 · Weather</span><span class="sensor-tag sensor-4">S4 · Edge rules</span>
+              <div class="scene-caption"><span id="scene-icon" aria-hidden="true">●</span><strong id="scene-caption">Normal flow · live synthetic motion</strong><em id="motion-status">Playing</em></div>
+            </div>
+            <footer class="scene-footer"><div class="legend"><span><i class="low"></i>Low</span><span><i class="elevated"></i>Elevated</span><span><i class="critical"></i>Critical</span></div><span>Schematic only · Not a geographic map</span></footer>
+          </article>
+
+          <article class="panel lab-panel" id="scenario-lab">
+            <header class="panel-header"><div><p class="eyebrow">Interactive demonstration</p><h2>Scenario lab</h2><p>Choose a condition and inject one synthetic event.</p></div></header>
+            <div class="scenario-options" id="scenario-options" role="group" aria-label="Choose a simulated road scenario"></div>
+            <section class="selected-scenario" aria-live="polite"><span>Selected · simulated</span><strong id="selected-title"></strong><p id="selected-description"></p></section>
+            <button class="button primary inject-button" id="inject" type="button"><span aria-hidden="true">＋</span> Inject simulated event</button>
+            <label class="field-label" for="sensitivity"><span>Illustrative sensitivity</span><select id="sensitivity"><option value="low">Low</option><option value="standard">Standard</option><option value="high">High</option></select></label>
+          </article>
+        </section>
+
+        <section class="lower-grid">
+          <article class="panel timeline-panel" id="incident-log">
+            <header class="panel-header timeline-header">
+              <div><p class="eyebrow">Operator work queue</p><h2>Simulated incident log <span class="count" id="timeline-count">0</span></h2><p>Acknowledge and resolve actions affect this browser demo only.</p></div>
+              <button class="button secondary compact" id="export" type="button">Download CSV</button>
+            </header>
+            <div class="filters" aria-label="Filter simulated incidents">
+              <label><span>Search</span><input id="event-search" type="search" placeholder="Search events" autocomplete="off"></label>
+              <label><span>Severity</span><select id="event-filter"><option value="all">All severities</option><option value="critical">Critical</option><option value="warning">Elevated</option><option value="advisory">Low</option></select></label>
+              <label><span>Status</span><select id="status-filter"><option value="all">All statuses</option><option value="new">New</option><option value="acknowledged">Acknowledged</option><option value="resolved">Resolved</option></select></label>
+            </div>
+            <div id="events" class="events" aria-live="polite" aria-busy="false"></div>
+            <footer class="panel-footer"><button id="clear-events" class="text-button" type="button">Clear incident log</button><span>Stored locally in this browser only</span></footer>
+          </article>
+
+          <article class="panel sensor-panel">
+            <header class="panel-header"><div><p class="eyebrow">Mock edge network</p><h2>Sensor node status</h2><p>Emulated telemetry with no device connection.</p></div></header>
+            <div id="sensors" class="sensor-list"></div>
+            <section class="why-5g"><strong>Why explore 5G?</strong><p>Future deployments may benefit from fast distribution of corroborated events across many roadside nodes. Latency, coverage, reliability, and safety outcomes must be independently field-tested against 4G and wired alternatives.</p></section>
+          </article>
+        </section>
+
+        <section class="concept" id="concept" aria-labelledby="concept-title">
+          <div class="concept-intro"><p class="eyebrow">Concept architecture · Not implemented</p><h2 id="concept-title">A privacy-first signal path, designed for human oversight.</h2><p>The prototype communicates a possible future workflow. It does not run an AI model, connect to 5G, identify people, control traffic lights, or contact responders.</p></div>
+          <ol class="signal-path">
+            <li><span>01</span><div><strong>Sense</strong><p>Permissioned roadside sensors produce minimal, non-identifying observations.</p></div></li>
+            <li><span>02</span><div><strong>Corroborate</strong><p>Validated edge models and safety rules compare multiple signals.</p></div></li>
+            <li><span>03</span><div><strong>Distribute</strong><p>Secure networks share verified event metadata with resilient fallback.</p></div></li>
+            <li><span>04</span><div><strong>Review</strong><p>Authorised operators assess context before any real-world response.</p></div></li>
+          </ol>
+          <div class="concept-notes">
+            <article><strong>Malaysia-first context</strong><p>Mixed motorcycle traffic, tropical rain, school crossings, last-mile transit links, and staged deployment economics.</p></article>
+            <article><strong>Privacy by design</strong><p>No camera stream, facial recognition, plate recognition, geolocation collection, personal profile, or cloud transmission in this demo.</p></article>
+            <article><strong>Safe deployment path</strong><p>Begin with authority approval, shadow-mode evaluation, independent validation, security review, fallback planning, and measured field trials.</p></article>
+          </div>
+        </section>
+
+        <footer class="site-footer"><strong>RoadGuardian AI</strong><span>Educational proof of concept · All data simulated · No login required</span><span>Challenge prototype · 2026</span></footer>
+      </div>
+      <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+    </main>
+  </div>
+</body>
+</html>
